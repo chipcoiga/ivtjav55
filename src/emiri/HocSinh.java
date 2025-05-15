@@ -12,6 +12,10 @@ public class HocSinh {
         return (math + physical + chemistry)/3;
     }
 
+    public static int demoStaticMethod() {
+        return 10;
+    }
+
     public static void main(String[] args) {
         HocSinh hocSinh1 = new HocSinh();
         hocSinh1.chemistry = 5;
