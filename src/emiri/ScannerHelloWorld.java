@@ -19,4 +19,3 @@ public class ScannerHelloWorld {
         int totalAB = numberB + numberA;
         System.out.println("Total numberA + numberB: " + totalAB);
     }
-}

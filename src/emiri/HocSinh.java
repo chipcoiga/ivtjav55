@@ -6,6 +6,55 @@ public class HocSinh {
     public boolean isMale; //true = Nam, false = Nu
     public int math;
     public int physical;
+
+    public int getChemistry() {
+        return chemistry;
+    }
+
+    public void setChemistry(int chemistry) {
+        this.chemistry = chemistry;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public boolean isMale() {
+        return isMale;
+    }
+
+    public void setMale(boolean male) {
+        isMale = male;
+    }
+
+    public int getMath() {
+        return math;
+    }
+
+    public void setMath(int math) {
+        this.math = math;
+    }
+
+    public int getPhysical() {
+        return physical;
+    }
+
+    public void setPhysical(int physical) {
+        this.physical = physical;
+    }
+
     public int chemistry;
 
     public int tinhDiemTrungBinh() {
@@ -30,9 +79,9 @@ public class HocSinh {
         hocSinh2.physical = 10;
         hocSinh2.name = "Huu Hau";
         hocSinh2.age = 34;
-        hocSinh2.isMale = true;
+        hocSinh2.isMale = true'
 
-        CodeJav125 codeJav125 = new CodeJav125();
+        CodeJav125 codeJav125 =           new CodeJav125();
     }
 }
 

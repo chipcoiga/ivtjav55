@@ -4,41 +4,41 @@ import java.util.Scanner;
 
 public class ScanForHocSinh {
     public static void main(String[] args) {
-        HocSinh emiri = new HocSinh();
+        HocSinh Huu = new HocSinh();
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hay nhap ten: ");
         String name = scanner.nextLine();
-        emiri.name = name;
+        Huu.name = name;
 
         System.out.println("Hay nhap tuoi: ");
         int age = scanner.nextInt();
-        emiri.age = age;
+        Huu.age = age;
 
         System.out.println("Hay nhap gioi tinh");
         boolean isMale = scanner.nextBoolean();
-        emiri.isMale = isMale;
+        Huu.isMale = isMale;
 
         System.out.println("Nhap diem toan: ");
         int math = scanner.nextInt();
-        emiri.math = math;
+        Huu.math = math;
 
         System.out.println("Nhap diem hoa: ");
         int chemistry = scanner.nextInt();
-        emiri.chemistry = chemistry;
+        Huu.chemistry = chemistry;
 
         System.out.println("Nhap diem ly:");
         int physical = scanner.nextInt();
-        emiri.physical = physical;
+        Huu.physical = physical;
 
         System.out.println("Thong tin da nhap:");
-        System.out.println("Name: " + emiri.name);
-        System.out.println("Age: " + emiri.age);
-        System.out.println("Gender: " + (emiri.isMale ? "Name" : "Nu"));
-        System.out.println("Math: " + emiri.math);
-        System.out.println("Physical: " + emiri.physical);
-        System.out.println("Chemistry: " + emiri.chemistry);
-        System.out.println("Average point: " + emiri.tinhDiemTrungBinh());
+        System.out.println("Name: " + Huu.name);
+        System.out.println("Age: " + Huu.age);
+        System.out.println("Gender: " + (Huu.isMale ? "Name" : "Nu"));
+        System.out.println("Math: " + Huu.math);
+        System.out.println("Physical: " + Huu.physical);
+        System.out.println("Chemistry: " + Huu.chemistry);
+        System.out.println("Average point: " + Huu.tinhDiemTrungBinh());
     }
 }
 /*
@@ -63,3 +63,6 @@ Physical: 9
 Chemistry: 10
 Average point: 9
  */
+
+
+
