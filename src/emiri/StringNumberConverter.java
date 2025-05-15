@@ -24,4 +24,6 @@ public class StringNumberConverter {
             return inputNumber();
         }
     }
+
+    //BTVN: thay int bang float
 }
