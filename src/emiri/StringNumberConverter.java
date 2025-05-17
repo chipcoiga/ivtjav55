@@ -8,7 +8,7 @@ public class StringNumberConverter {
         int number = inputNumber();
         System.out.println("So ban da nhap: " + number);
     }
-
+//levanson
     private static int inputNumber() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hay nhap ky tu bat ky:");
