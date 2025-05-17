@@ -10,6 +10,28 @@ public class HocSinh {
     private int physical;
     private int chemistry;
 
+    public HocSinh(){}
+    public HocSinh(String name,
+                   int age,
+                   boolean isMale,
+                   int math,
+                   int physical,
+                   int chemistry){
+        this.name = name;
+        this.age = age;
+        this.isMale = isMale;
+        this.math = math;
+        this.physical = physical;
+        this.chemistry = chemistry;
+    }
+
+    public HocSinh(String name,
+                   int physical,
+                   int chemistry){
+        this.name = name;
+        this.physical = physical;
+        this.chemistry = chemistry;
+    }
 
     public String getName() {
         return name;
@@ -24,6 +46,9 @@ public class HocSinh {
     }
 
     public void setAge(int age) {
+        if (age > 100) {
+            System.out.println("Tuoi gi gia the");
+        }
         this.age = age;
     }
 

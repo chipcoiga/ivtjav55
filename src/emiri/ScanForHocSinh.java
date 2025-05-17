@@ -40,6 +40,29 @@ public class ScanForHocSinh {
         System.out.println("Chemistry: " + emiri.getChemistry());
         System.out.println("Average point: " + emiri.tinhDiemTrungBinh());
     }
+
+    public static void demoConstructor() {
+        Scanner scanner = new Scanner(System.in);
+
+        String name = "Fudaka";//Scan
+        int age = 30;
+        boolean isMale = false;
+        int math = 10;
+
+        System.out.println("Nhap diem ly:");
+        int physical = scanner.nextInt();
+//        int physical = 10;
+        int chemistry = 10;
+
+        HocSinh fudaka = new HocSinh(
+                name,
+                age,
+                isMale,
+                math,
+                physical,
+                chemistry
+        );
+    }
 }
 /*
 Hay nhap ten:
