@@ -43,4 +43,40 @@ public class StringNumberConverter {
 
     //TODO BTVN: thay int bang float
     //Nop bai tap qua GIT
+    /*
+
+public class Main {
+    public static void main(String[] args) {
+        float number = inputNumber();
+        System.out.println("So ban da nhap: " + number);
+    }
+
+    private static float inputNumber() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Hay nhap so diem (co the la so thuc):");
+        String numberString = scanner.nextLine();
+        System.out.println("Chuoi vua nhap: " + numberString);
+
+        try {
+            float number = Float.parseFloat(numberString); // Chuyển chuỗi thành float
+            System.out.println("Number thu duoc: " + number);
+
+            if (number < 5.0f && number >= 2.0f) {
+                System.out.println("May nhap so nho hon 5");
+                return inputNumber();
+            }
+
+            if (number != 3.0f) {
+                System.out.println("hehe");
+            }
+
+            return number;
+        } catch (NumberFormatException exception) {
+            System.out.println("Cai thu may vua nhap vao ko phai la Number");
+            return inputNumber();
+        }
+    }
+}
+
+    * */
 }
