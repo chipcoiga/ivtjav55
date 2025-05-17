@@ -1,12 +1,63 @@
 package emiri;
 
+//Public / private / protected /
+//class / interface / enum / record
 public class HocSinh {
-    public String name;
-    public int age;
-    public boolean isMale; //true = Nam, false = Nu
-    public int math;
-    public int physical;
-    public int chemistry;
+    private String name;
+    private int age;
+    private boolean isMale; //true = Nam, false = Nu
+    private int math;
+    private int physical;
+    private int chemistry;
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public boolean isMale() {
+        return isMale;
+    }
+
+    public void setMale(boolean male) {
+        isMale = male;
+    }
+
+    public int getMath() {
+        return math;
+    }
+
+    public void setMath(int math) {
+        this.math = math;
+    }
+
+    public int getPhysical() {
+        return physical;
+    }
+
+    public void setPhysical(int physical) {
+        this.physical = physical;
+    }
+
+    public int getChemistry() {
+        return chemistry;
+    }
+
+    public void setChemistry(int chemistry) {
+        this.chemistry = chemistry;
+    }
 
     public int tinhDiemTrungBinh() {
         return (math + physical + chemistry)/3;

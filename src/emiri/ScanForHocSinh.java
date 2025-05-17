@@ -9,35 +9,35 @@ public class ScanForHocSinh {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hay nhap ten: ");
         String name = scanner.nextLine();
-        emiri.name = name;
+        emiri.setName(name);
 
         System.out.println("Hay nhap tuoi: ");
         int age = scanner.nextInt();
-        emiri.age = age;
+        emiri.setAge(age);
 
         System.out.println("Hay nhap gioi tinh");
         boolean isMale = scanner.nextBoolean();
-        emiri.isMale = isMale;
+        emiri.setMale(isMale);
 
         System.out.println("Nhap diem toan: ");
         int math = scanner.nextInt();
-        emiri.math = math;
+        emiri.setMath(math);
 
         System.out.println("Nhap diem hoa: ");
         int chemistry = scanner.nextInt();
-        emiri.chemistry = chemistry;
+        emiri.setChemistry(chemistry);
 
         System.out.println("Nhap diem ly:");
         int physical = scanner.nextInt();
-        emiri.physical = physical;
+        emiri.setPhysical(physical);
 
         System.out.println("Thong tin da nhap:");
-        System.out.println("Name: " + emiri.name);
-        System.out.println("Age: " + emiri.age);
-        System.out.println("Gender: " + (emiri.isMale ? "Name" : "Nu"));
-        System.out.println("Math: " + emiri.math);
-        System.out.println("Physical: " + emiri.physical);
-        System.out.println("Chemistry: " + emiri.chemistry);
+        System.out.println("Name: " + emiri.getName());
+        System.out.println("Age: " + emiri.getAge());
+        System.out.println("Gender: " + (emiri.isMale() ? "Name" : "Nu"));
+        System.out.println("Math: " + emiri.getMath());
+        System.out.println("Physical: " + emiri.getPhysical());
+        System.out.println("Chemistry: " + emiri.getChemistry());
         System.out.println("Average point: " + emiri.tinhDiemTrungBinh());
     }
 }
