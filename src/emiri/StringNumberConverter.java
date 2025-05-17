@@ -14,7 +14,7 @@ public class StringNumberConverter {
         System.out.println("Hay nhap ky tu bat ky:");
         String numberString = scanner.nextLine();
         System.out.println("Chuoi vua nhap: " + numberString);
-
+///sdffwfewfd
         try {
             int number = Integer.parseInt(numberString); //NumberFormatException
             System.out.println("Number thu duoc: " + number);
