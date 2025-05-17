@@ -4,6 +4,9 @@ public class StringNumberConverter {
     public static void main(String[] args) {
         float number = inputNumber();
         System.out.println("Số bạn đã nhập: " + number);
+         float numberOfF = validateNumberF();
+        System.out.println("int number cua ban: " + number);
+        System.out.println("float numberOfF cua ban: " + numberOfF);
     }
 
     private static float inputNumber() {
@@ -22,5 +25,20 @@ public class StringNumberConverter {
         }
     }
     // thay int thành float
-    //NOP BAI TAP QUA GIT
+    private static float validateNumberF() {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Nhập điểm: ");
+        String input = scanner.nextLine().trim();
+        input = input.replace(",", ".");
+
+        try {
+            float numberF = Float.parseFloat(input);
+            System.out.println("Float thu duoc: " + numberF);
+            return numberF;
+        } catch (NumberFormatException exception) {
+            System.out.println("Cai thu may vua nhap khong phai la Float");
+            return validateNumberF();
+        }
+    }
 }
