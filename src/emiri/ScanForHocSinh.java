@@ -40,6 +40,7 @@ public class ScanForHocSinh {
         System.out.println("Chemistry: " + emiri.chemistry);
         System.out.println("Average point: " + emiri.tinhDiemTrungBinh());
     }
+//    thu
 }
 /*
 Hay nhap ten:
