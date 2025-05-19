@@ -38,6 +38,16 @@ public class HocSinh {
 
         CodeJav125 codeJav125 = new CodeJav125();
     }
+    public String xepLoaiHocLuc() {
+        double diemTB = tinhDiemTrungBinh();
+        if (diemTB < 5) {
+            return "Học kém";
+        } else if (diemTB <= 8) {
+            return "Học khá";
+        } else {
+            return "Học giỏi";
+        }
+    }
 }
 
 //Java, C#, C++, Javascript: Typescript OOP

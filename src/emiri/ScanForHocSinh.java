@@ -20,7 +20,14 @@ public class ScanForHocSinh {
         emiri.isMale = isMale;
 
         System.out.println("Nhap diem toan: ");
-        int math = scanner.nextInt();
+        int math;
+        do {
+            System.out.println("Nhap diem toan (phai >= 8): ");
+            math = scanner.nextInt();
+            if (math < 8) {
+                System.out.println("Diem toan phai >= 8, vui long nhap lai!");
+            }
+        } while (math < 8);
         emiri.math = math;
 
         System.out.println("Nhap diem hoa: ");
@@ -39,27 +46,6 @@ public class ScanForHocSinh {
         System.out.println("Physical: " + emiri.physical);
         System.out.println("Chemistry: " + emiri.chemistry);
         System.out.println("Average point: " + emiri.tinhDiemTrungBinh());
+        System.out.println("Xep loai hoc luc: " + emiri.xepLoaiHocLuc());
     }
 }
-/*
-Hay nhap ten:
-Emiri
-Hay nhap tuoi:
-30
-Hay nhap gioi tinh: isMale
-true
-Nhap diem toan:
-10
-Nhap diem hoa:
-10
-Nhap diem ly:
-9
-Thong tin da nhap:
-Name: Emiri
-Age: 30
-Gender: Name
-Math: 10
-Physical: 9
-Chemistry: 10
-Average point: 9
- */
