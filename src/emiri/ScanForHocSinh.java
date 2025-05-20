@@ -54,6 +54,7 @@ public class ScanForHocSinh {
 //        int physical = 10;
         int chemistry = 10;
 
+        HocSinh KieuTrinh = new HocSinh();
         HocSinh fudaka = new HocSinh(
                 name,
                 age,
