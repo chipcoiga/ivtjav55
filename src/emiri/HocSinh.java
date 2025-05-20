@@ -68,6 +68,10 @@ public class HocSinh {
         this.math = math;
     }
 
+    public void setMath(int math, int b) {
+        this.math = math;
+    }
+
     public int getPhysical() {
         return physical;
     }

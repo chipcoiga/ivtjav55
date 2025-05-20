@@ -19,8 +19,14 @@ public class ScanForHocSinh {
         boolean isMale = scanner.nextBoolean();
         emiri.setMale(isMale);
 
-        System.out.println("Nhap diem toan: ");
-        int math = scanner.nextInt();
+        int math;
+        do {
+            System.out.println("Nhập điểm toán (>= 8): ");
+            math = scanner.nextInt();
+            if (math < 8) {
+                System.out.println("Điểm toán phải >= 8. Vui lòng nhập lại.");
+            }
+        } while (math < 8);
         emiri.setMath(math);
 
         System.out.println("Nhap diem hoa: ");
@@ -39,6 +45,17 @@ public class ScanForHocSinh {
         System.out.println("Physical: " + emiri.getPhysical());
         System.out.println("Chemistry: " + emiri.getChemistry());
         System.out.println("Average point: " + emiri.tinhDiemTrungBinh());
+        double avg = emiri.tinhDiemTrungBinh();
+        System.out.println("Điểm trung bình: " + avg);
+
+        // Xếp loại học lực
+        if (avg < 5) {
+            System.out.println("Xếp loại: Học kém");
+        } else if (avg < 8) {
+            System.out.println("Xếp loại: Học khá");
+        } else {
+            System.out.println("Xếp loại: Học giỏi");
+        }
     }
 
     public static void demoConstructor() {
@@ -54,6 +71,7 @@ public class ScanForHocSinh {
 //        int physical = 10;
         int chemistry = 10;
 
+        HocSinh KieuTrinh = new HocSinh();
         HocSinh fudaka = new HocSinh(
                 name,
                 age,
