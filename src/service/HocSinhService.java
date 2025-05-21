@@ -51,7 +51,6 @@ public class HocSinhService {
             return false;
         }
 
-
         return true;
     }
 }

@@ -34,7 +34,6 @@ public class Main {
             System.out.println("Thong tin hoc sinh ko hop le");
             return;
         }
-
         String hocLuc = service.phanLoaiHocLuc(hocSinhDto);
         String name = hocSinhDto.getName();
         System.out.println("Hoc luc cua Hoc sinh ten "
