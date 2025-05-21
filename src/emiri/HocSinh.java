@@ -12,10 +12,6 @@ public class HocSinh {
         return (math + physical + chemistry)/3;
     }
 
-    public static int demoStaticMethod() {
-        return 10;
-    }
-
     public static void main(String[] args) {
         HocSinh hocSinh1 = new HocSinh();
         hocSinh1.chemistry = 5;
@@ -36,7 +32,6 @@ public class HocSinh {
         hocSinh2.age = 34;
         hocSinh2.isMale = true;
 
-        CodeJav125 codeJav125 = new CodeJav125();
     }
 }
 

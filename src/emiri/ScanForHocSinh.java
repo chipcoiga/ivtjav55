@@ -19,8 +19,14 @@ public class ScanForHocSinh {
         boolean isMale = scanner.nextBoolean();
         emiri.isMale = isMale;
 
-        System.out.println("Nhap diem toan: ");
-        int math = scanner.nextInt();
+        int math;
+        do {
+            System.out.println("Nhap diem toan (>= 8): ");
+            math = scanner.nextInt();
+            if (math < 8) {
+                System.out.println("Diem toan phai lon hon hoac bang 8. Vui long nhap lai.");
+            }
+        } while (math < 8);
         emiri.math = math;
 
         System.out.println("Nhap diem hoa: ");
