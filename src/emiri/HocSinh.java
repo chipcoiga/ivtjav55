@@ -32,7 +32,6 @@ public class HocSinh {
         hocSinh2.age = 34;
         hocSinh2.isMale = true;
 
-        CodeJav125 codeJav125 = new CodeJav125();
     }
 }
 
