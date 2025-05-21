@@ -2,6 +2,7 @@ package service;
 
 import domain.HocSinhDto;
 import helper.StringHelper;
+import helper.ValidatorUtil;
 
 public class HocSinhService {
 
@@ -41,6 +42,15 @@ public class HocSinhService {
         if (isNameValid == false || isAddressValid == false) {
             return false;
         }
+
+
+        if (!ValidatorUtil.isValidAge(hocSinh.getAge()) ||
+                !ValidatorUtil.isValidDiem(hocSinh.getMath()) ||
+                !ValidatorUtil.isValidDiem(hocSinh.getPhysical()) ||
+                !ValidatorUtil.isValidDiem(hocSinh.getChemistry())) {
+            return false;
+        }
+
 
         return true;
     }
