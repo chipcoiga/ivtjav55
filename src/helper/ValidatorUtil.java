@@ -10,6 +10,7 @@ public class ValidatorUtil {
             return false;
         }
     }
+
     public static boolean isValidDiem(float diem) {
         if (diem >= 0 && diem <= 10) {
             return true;

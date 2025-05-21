@@ -50,7 +50,7 @@ public class HocSinhService {
                 !ValidatorUtil.isValidDiem(hocSinh.getChemistry())) {
             return false;
         }
-
+//tht
         return true;
     }
 }
