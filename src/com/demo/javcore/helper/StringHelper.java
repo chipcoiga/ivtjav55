@@ -21,3 +21,4 @@ public class StringHelper {
         return false;  // chuỗi hợp lệ, không rỗng
     }
 }
+.
