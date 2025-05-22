@@ -28,7 +28,7 @@ public class Main {
 
         HocSinhService service = new HocSinhService();
         boolean isHocSinhValid = service.validateHocSinh(hocSinhDto);
-// f
+// fsgr
         // if (isHocSinhValid ==false ) {
         if (!isHocSinhValid) {
             System.out.println("Thong tin hoc sinh ko hop le");
