@@ -1,8 +1,8 @@
 package com.demo.javcore.service;
 
-
 import com.demo.javcore.domain.HocSinhDto;
 import com.demo.javcore.helper.StringHelper;
+import com.demo.javcore.helper.ValidationUtil;
 
 public class HocSinhService {
 
@@ -11,14 +11,11 @@ public class HocSinhService {
      * Từ 4 đến dưới 6 => trung bình
      * Từ 6 đến dưới 8 => khá
      * từ 8 trở lên => Giỏi
-     * @param hocSinh
-     * @return
      */
     public String phanLoaiHocLuc(HocSinhDto hocSinh) {
-        float diemTrungBinh =
-                (hocSinh.getMath()
-                        + hocSinh.getPhysical()
-                        + hocSinh.getChemistry())/3;
+        float diemTrungBinh = (hocSinh.getMath()
+                + hocSinh.getPhysical()
+                + hocSinh.getChemistry()) / 3;
 
         if (diemTrungBinh < 4) {
             return "Học lực yếu";
@@ -29,17 +26,38 @@ public class HocSinhService {
         }
 
         if (diemTrungBinh < 8) {
-            return "Học lực Khá";
+            return "Học lực khá";
         }
 
-        return "Học lực GIỎI";
+        return "Học lực giỏi";
     }
 
     public boolean validateHocSinh(HocSinhDto hocSinh) {
-        boolean isNameValid = StringHelper.isBlank(hocSinh.getName());
-        boolean isAddressValid = StringHelper.isBlank(hocSinh.getAddress());
+        boolean isNameBlank = StringHelper.isBlank(hocSinh.getName());
+        boolean isAddressBlank = StringHelper.isBlank(hocSinh.getAddress());
 
-        if (isNameValid == false || isAddressValid == false) {
+        if (isNameBlank || isAddressBlank) {
+            System.out.println("Tên hoặc địa chỉ không hợp lệ");
+            return false;
+        }
+
+        if (!ValidationUtil.isValidAge(hocSinh.getAge())) {
+            System.out.println("Tuổi không hợp lệ (phải từ 6 đến 100)");
+            return false;
+        }
+
+        if (!ValidationUtil.isValidScore(hocSinh.getMath())) {
+            System.out.println("Điểm Toán không hợp lệ (0-10)");
+            return false;
+        }
+
+        if (!ValidationUtil.isValidScore(hocSinh.getPhysical())) {
+            System.out.println("Điểm Lý không hợp lệ (0-10)");
+            return false;
+        }
+
+        if (!ValidationUtil.isValidScore(hocSinh.getChemistry())) {
+            System.out.println("Điểm Hóa không hợp lệ (0-10)");
             return false;
         }
 
