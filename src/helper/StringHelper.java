@@ -10,7 +10,7 @@ public class StringHelper {
             System.out.println("Input bi empty");
             return false;
         }
-//rr
+//rrg
         String addressStrim = input.replaceAll(" ", "");
         if (addressStrim.equals("")) {
             System.out.println("Input bi empty");
