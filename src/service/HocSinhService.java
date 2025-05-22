@@ -44,4 +44,15 @@ public class HocSinhService {
 
         return true;
     }
+    public boolean validNumber(HocSinhDto hocSinh){
+
+        boolean isMathPointValid = StringHelper.checkNumber(hocSinh.getMath());
+        boolean isPhysicPointValid = StringHelper.checkNumber(hocSinh.getPhysical());
+        boolean isChemistryPointValid = StringHelper.checkNumber(hocSinh.getChemistry());
+
+        if(isMathPointValid == false || isPhysicPointValid == false || isChemistryPointValid == false){
+            return false;
+        }
+        return true;
+    }
 }

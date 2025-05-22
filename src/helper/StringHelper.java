@@ -20,4 +20,12 @@ public class StringHelper {
 
         return true;
     }
-}
+    public static boolean checkNumber(float number){
+            if(number < 0 || number >10){
+                System.out.println("So diem khong dung");
+                return false;
+            }
+
+            return true;
+
+}}
