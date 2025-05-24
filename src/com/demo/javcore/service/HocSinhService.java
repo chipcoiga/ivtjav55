@@ -42,7 +42,6 @@ public class HocSinhService {
         if (isNameValid == false || isAddressValid == false) {
             return false;
         }
-
         return true;
     }
 }
