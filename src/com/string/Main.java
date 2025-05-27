@@ -4,11 +4,13 @@ public class Main {
     public static void main(String[] args) {
 
         String firstname = "Nguyen";
-        String middlename = "Van";
+        String middlename = "Van Van";
         String lastname = "Tay Thi";
 
         String joinStr = firstname + " " + middlename + " " + lastname;
         System.out.println(joinStr);
+        String replace = joinStr.replace("Van", "Thi");
+        System.out.println(replace);
 
         StringBuffer buffer = new StringBuffer();
         buffer.append(firstname)
@@ -26,5 +28,6 @@ public class Main {
                 .append(lastname);
         String builderSrt = builder.toString();
         System.out.println(builderSrt);
+
     }
 }
