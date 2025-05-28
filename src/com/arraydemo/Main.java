@@ -7,11 +7,50 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int numberOfStudent = inputNumberOfStudent();
-        HocSinhDto[] students = inputStudentInformation(numberOfStudent);
-        for (int i = 0 ; i < students.length; i++) {
-            phanLoaiHocLuc(students[i]);
-        }
+        Scanner scanner = new Scanner(System.in);
+        int choice  ;
+        int numberOfStudent = 0;
+        HocSinhDto[] students = null;
+
+        do {
+            System.out.println("1.Nhập số lượng student: ");
+            System.out.println("2.Nhập thông tin student: ");
+            System.out.println("3.Xuất học lực");
+            System.out.println("4.Thoát chương trình");
+            System.out.println();
+
+            choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    numberOfStudent = inputNumberOfStudent();
+                    break;
+                case 2:
+                    if (numberOfStudent <= 0) {
+                        System.out.println("Vui lòng nhập số lượng học sinh trước.");
+                    } else {
+                        students = inputStudentInformation(numberOfStudent);
+                    }
+                    break;
+                case 3:
+                    if (students == null) {
+                        System.out.println("Vui lòng nhập thông tin học sinh trước.");
+                    } else {
+                        for (int i = 0; i < students.length; i++) {
+                            phanLoaiHocLuc(students[i]);
+                        }
+
+                    }
+                    break;
+                case 4:
+                    System.out.println("Đã thoát chương trình.");
+                    break;
+                default:
+                    System.out.println("Lựa chọn không hợp lệ, vui lòng chọn lại (1-4).");
+
+
+            }
+        }while (choice != 4);
     }
 
     private static HocSinhDto[] inputStudentInformation(int numberOfStudent) {
@@ -41,6 +80,7 @@ public class Main {
         System.out.println("Nhap diem Hoa:");
         int chemistry = scanner.nextInt();
         student.setChemistry(chemistry);
+
 
         return student;
     }
