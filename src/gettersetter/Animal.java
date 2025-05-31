@@ -1,8 +1,10 @@
 package gettersetter;
 
-public class Animal {
+public abstract class Animal {
     private String fullname;
     private int age;
+
+    public abstract void action();
 
     public String getFullname() {
         return fullname;
