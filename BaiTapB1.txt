@@ -1,7 +1,6 @@
 Bài tập java core
 
 1. Bài tập Boolean
-
 Bài 1 - Kiểm tra điều kiện cơ bản:
 java
 // Viết chương trình kiểm tra một số có phải là số chẵn không
