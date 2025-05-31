@@ -4,16 +4,15 @@ public class Main {
     public static void main(String[] args) {
         Animal[] animals = new Animal[3];
 
-        Dog dog = new Dog();
-        dog.setFullname("Dog");
-        dog.setAge(100);
-        dog.setColor("RED");
+
+        Dog dog = new Dog("Dog", 100, "RED");
         animals[0] = dog;
 
         Cat cat = new Cat();
         cat.setFullname("Cat");
         cat.setAge(40);
         cat.setGender("MALE");
+//        cat.setSize(100);
         animals[1] = cat;
 
         Duck duck = new Duck();
@@ -29,6 +28,7 @@ public class Main {
         for(Animal animal : animals) {
             if (animal.getAge() < 50) {
                 System.out.println(animal.getFullname());
+                animal.action();
 
                 if (animal instanceof Cat) {
                     Cat cat = (Cat) animal;
