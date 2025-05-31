@@ -1,0 +1,95 @@
+Bài tập java core
+
+1. Bài tập Boolean
+Bài 1 - Kiểm tra điều kiện cơ bản:
+java
+// Viết chương trình kiểm tra một số có phải là số chẵn không
+// Input: số nguyên n
+// Output: true nếu n chẵn, false nếu n lẻ
+
+Bài 2 - Logic phức hợp:
+java
+// Kiểm tra một năm có phải năm nhuận không
+// Điều kiện: chia hết cho 4 NHƯNG không chia hết cho 100,
+// HOẶC chia hết cho 400
+
+Bài 3 - Kết hợp nhiều điều kiện:
+java
+// Kiểm tra một học sinh có đạt học bổng không
+// Điều kiện: điểm >= 8.0 VÀ không có môn nào dưới 6.5 VÀ số buổi vắng <= 3
+
+2. Bài tập If/Else
+Bài 4 - Phân loại điểm số:
+java
+// Xếp loại học lực dựa trên điểm trung bình
+// >= 8.5: Xuất sắc, >= 7.0: Giỏi, >= 5.5: Khá,
+// >= 4.0: Trung bình, < 4.0: Yếu
+
+Bài 5 - Tính tiền điện:
+java
+// Tính tiền điện theo bậc thang
+// 0-50 kWh: 1.678đ/kWh
+// 51-100 kWh: 1.734đ/kWh
+// 101-200 kWh: 2.014đ/kWh
+// >200 kWh: 2.536đ/kWh
+
+Bài 6 - Giải phương trình bậc 2:
+java
+// Giải phương trình ax² + bx + c = 0
+// Xét các trường hợp: a=0, delta<0, delta=0, delta>0
+
+3. Bài tập Switch
+Bài 7 - Menu calculator:
+java
+// Tạo máy tính đơn giản với menu:
+// 1: Cộng, 2: Trừ, 3: Nhân, 4: Chia, 5: Thoát
+// Sử dụng switch để xử lý lựa chọn
+
+Bài 8 - Chuyển đổi số thành chữ:
+java
+// Chuyển số từ 1-7 thành tên thứ trong tuần
+// 1: Chủ nhật, 2: Thứ hai, ..., 7: Thứ bảy
+
+Bài 9 - Tính số ngày trong tháng:
+java
+// Nhập tháng và năm, tính số ngày trong tháng đó
+// Chú ý tháng 2 của năm nhuận
+
+4. Bài tập Loop
+Bài 10 - For loop cơ bản:
+java
+// Tính tổng các số từ 1 đến n
+// Tìm số lớn nhất trong dãy n số nhập từ bàn phím
+
+Bài 11 - While loop:
+java
+// Đoán số: Máy tính random một số từ 1-100,
+// người chơi đoán đến khi đúng
+// Hiển thị số lần đoán
+
+Bài 12 - Nested loop:
+java
+// In bảng cửu chương từ 1 đến 9
+// In hình tam giác sao với n dòng
+
+Bài 13 - Loop với điều kiện:
+java
+// Tìm tất cả số nguyên tố từ 1 đến n
+// Tính tổng các chữ số của một số nguyên
+
+5. Bài tập Try/Catch
+Bài 14 - Xử lý input:
+java
+// Nhập vào một số nguyên, xử lý ngoại lệ khi người dùng
+// nhập sai định dạng (NumberFormatException)
+
+Bài 15 - Chia cho 0:
+java
+// Viết chương trình chia 2 số, xử lý trường hợp chia cho 0
+// (ArithmeticException)
+
+Bài 16 - Xử lý nhiều ngoại lệ:
+java
+// Chương trình tính chỉ số BMI
+// Xử lý: NumberFormatException, ArithmeticException,
+// và custom exception cho giá trị âm
