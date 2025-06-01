@@ -1,5 +1,9 @@
 package validator;
 
-public abstract class Validator {
-    public abstract void validate();
+public interface Validator {
+    void validate();
+
+    default void countNumber() {
+        System.out.println("Show count number");
+    }
 }
