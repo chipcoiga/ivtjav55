@@ -1,6 +1,6 @@
 package validator;
 
-public class XValidator extends Validator{
+public class XValidator implements Validator{
     @Override
     public void validate() {
 

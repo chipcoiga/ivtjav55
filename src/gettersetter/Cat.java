@@ -6,6 +6,7 @@ public class Cat extends Animal {
     @Override
     public void action() {
         System.out.println("Cat Action");
+        countNumber();
     }
 
     public void action(int count) {
