@@ -18,7 +18,6 @@ public class Triangle extends Polygon{
     public int calculatePerimeter() {
         return super.calculatePerimeter();
     }
-
     public double calculateArea() {
         int[] sides = getSideLengths();
         int a = sides[0];

@@ -30,7 +30,6 @@ public class Polygon {
         }
         return perimeter;
     }
-
     public void printSides() {
         System.out.print("So canh: ");
         for (int length : sideLengths) {

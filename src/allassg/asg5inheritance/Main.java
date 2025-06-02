@@ -13,7 +13,6 @@ public class Main {
             System.out.print("Side " + (i + 1) + ": ");
             sides[i] = scanner.nextInt();
         }
-
         triangle.setSideLengths(sides);
 
         if (!triangle.isValidTriangle()) {
