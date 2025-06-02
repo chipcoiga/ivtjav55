@@ -12,7 +12,42 @@ public class Main {
         for (int i = 0 ; i < students.length; i++) {
             phanLoaiHocLuc(students[i]);
         }
+        Scanner scanner = new Scanner(System.in);
+        int number;
+
+        do {
+            System.out.println("Menu: ");
+            System.out.println("1. Nhap so luong hoc sinh");
+            System.out.println("2. Nhap thong tin hoc sing");
+            System.out.println("3 .Xuat hoc luc");
+            System.out.println("4 .Thoat");
+            System.out.println("Choose number: ");
+            number = scanner.nextInt();
+            switch (number) {
+                case 1:
+                    inputNumberOfStudent();
+                    break;
+                case 2:
+                    inputStudentInformation(numberOfStudent);
+                    break;
+                case 3:
+                    for (int i = 0 ; i < students.length; i++) {
+                        phanLoaiHocLuc(students[i]);
+                    }
+                    break;
+                case 4:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println(" So khong dung");
+                    continue;
+
+            }
+
+        }
+        while(number!=0);
     }
+
 
     private static HocSinhDto[] inputStudentInformation(int numberOfStudent) {
         HocSinhDto[] students = new HocSinhDto[numberOfStudent];
