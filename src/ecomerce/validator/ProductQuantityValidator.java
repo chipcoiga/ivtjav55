@@ -1,6 +1,6 @@
-package validator;
+package ecomerce.validator;
 
-public class ProductQuantityValidator extends Validator{
+public class ProductQuantityValidator implements Validator{
     @Override
     public void validate() {
         System.out.println("ProductQuantityValidator OK");

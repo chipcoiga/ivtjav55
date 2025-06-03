@@ -1,6 +1,6 @@
-package validator;
+package ecomerce.validator;
 
-public class ShippingTimeValidator extends Validator{
+public class ShippingTimeValidator implements Validator{
     @Override
     public void validate() {
         System.out.println("ShippingTimeValidator OK");
