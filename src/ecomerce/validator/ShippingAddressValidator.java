@@ -1,4 +1,4 @@
-package validator;
+package ecomerce.validator;
 
 public class ShippingAddressValidator implements Validator{
     @Override
