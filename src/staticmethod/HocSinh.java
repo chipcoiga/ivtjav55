@@ -1,22 +1,48 @@
 package staticmethod;
 
+import com.demo.javcore.enumerated.Gender;
+
 public class HocSinh {
-    private static String nameStatic;
-    private String nameNormal;
+    private String name;
+    private String age;
+    private School school;
+    private Gender gender;
 
-    public void actionNormal(String name) {
-        nameNormal = name;
+    class School {
+        private String schoolName;
+        private String schoolCeo;
+        private String schoolAddress;
     }
 
-    public static void actionStatic(String name) {
-        nameStatic = name;
+    public String getName() {
+        return name;
     }
 
-    public String getNameNormal() {
-        return this.nameNormal;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getNameStatic() {
-        return nameStatic;
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public School getSchool() {
+        return school;
+    }
+
+    public void setSchool(School school) {
+        this.school = school;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 }

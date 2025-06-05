@@ -4,20 +4,20 @@ public class StringHelper {
     public static boolean isBlank(String input) {
         if (input == null) {
             System.out.println("Input bi null");
-            return false;
+            return true;
         }
 
         if (input.equals("")) {
             System.out.println("Input bi empty");
-            return false;
+            return true;
         }
 
         String addressStrim = input.replaceAll(" ", "");
         if (addressStrim.equals("")) {
             System.out.println("Input bi empty");
-            return false;
+            return true;
         }
 
-        return true;
+        return false;
     }
 }
