@@ -2,6 +2,7 @@ package collectionsdemo.lambda;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,7 +23,7 @@ public class Main {
         System.out.println(noPhoneContact.size());
     }
 
-    private static List<Contact> getContacts(List<Contact> contacts, TestContact testContact) {
+    private static List<Contact> getContacts(List<Contact> contacts, Predicate<Contact> testContact) {
         List<Contact> noPhoneContact = new ArrayList<>();
         for (Contact contact : contacts) {
             if (testContact.test(contact)) {
@@ -31,8 +32,4 @@ public class Main {
         }
         return noPhoneContact;
     }
-}
-
-interface TestContact {
-    boolean test(Contact c);
 }
