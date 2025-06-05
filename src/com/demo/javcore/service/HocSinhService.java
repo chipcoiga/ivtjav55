@@ -3,6 +3,9 @@ package com.demo.javcore.service;
 
 import com.demo.javcore.domain.HocSinhDto;
 import com.demo.javcore.helper.StringHelper;
+import com.demo.javcore.validator.HocSinhValidator;
+import com.demo.javcore.validator.ValidatorFactory;
+import ecomerce.validator.Validator;
 
 public class HocSinhService {
 
@@ -36,11 +39,10 @@ public class HocSinhService {
     }
 
     public boolean validateHocSinh(HocSinhDto hocSinh) {
-        boolean isNameValid = StringHelper.isBlank(hocSinh.getName());
-        boolean isAddressValid = StringHelper.isBlank(hocSinh.getAddress());
-
-        if (isNameValid == false || isAddressValid == false) {
-            return false;
+        ValidatorFactory validatorFactory = new ValidatorFactory();
+        HocSinhValidator[] validators = validatorFactory.getValidatorChain(hocSinh);
+        for (HocSinhValidator validator : validators) {
+            validator.validate();
         }
         return true;
     }
