@@ -17,5 +17,5 @@ public class ValidateFactory {
         validators.add(new PointValidate(hocSinh));
         return validators;
     }
-}
+}//a
 

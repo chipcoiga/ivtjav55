@@ -20,3 +20,4 @@ public class NameValidate implements HocSinhValidater{
 
     }
 }
+//a

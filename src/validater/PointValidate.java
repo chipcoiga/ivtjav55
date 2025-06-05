@@ -16,4 +16,4 @@ public class PointValidate implements HocSinhValidater {
             System.out.println("nhập điểm thành công");
         }
     }
-}
+}//a
