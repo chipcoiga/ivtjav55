@@ -6,12 +6,10 @@ public class StringHelper {
             System.out.println("Input bi null");
             return false;
         }
-
         if (input.equals("")) {
             System.out.println("Input bi empty");
             return false;
         }
-
         String addressStrim = input.replaceAll(" ", "");
         if (addressStrim.equals("")) {
             System.out.println("Input bi empty");

@@ -47,7 +47,6 @@ public class HocSinhDto {
     public void setPhysical(float physical) {
         this.physical = physical;
     }
-
     public float getChemistry() {
         return chemistry;
     }
