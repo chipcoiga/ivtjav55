@@ -4,12 +4,21 @@ public class HocSinhDto {
     private String name;
     private String address;
     private int age;
+    private double point;
     private float math;
     private float physical;
     private float chemistry;
 
     public String getName() {
         return name;
+    }
+
+    public double getPoint() {
+        return point;
+    }
+
+    public void setPoint(double point) {
+        this.point = point;
     }
 
     public void setName(String name) {
