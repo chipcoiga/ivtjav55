@@ -2,8 +2,7 @@ package com.demo.javcore.service;
 
 
 import com.demo.javcore.domain.HocSinhDto;
-import com.demo.javcore.vadilator.HocSinhValidator;
-import com.demo.javcore.vadilator.ValidatorFactory;
+import com.demo.javcore.helper.StringHelper;
 
 public class HocSinhService {
 
@@ -36,33 +35,13 @@ public class HocSinhService {
         return "Học lực GIỎI";
     }
 
-    public ValidationResult validateHocSinh(HocSinhDto hocSinh) {
-        ValidatorFactory factory = new ValidatorFactory();
-        HocSinhValidator[] validators = factory.getValidatorsChain(hocSinh);
+    public boolean validateHocSinh(HocSinhDto hocSinh) {
+        boolean isNameValid = StringHelper.isBlank(hocSinh.getName());
+        boolean isAddressValid = StringHelper.isBlank(hocSinh.getAddress());
 
-        for (HocSinhValidator validator : validators) {
-            if(!validator.validate(hocSinh)) {
-                return new ValidationResult(false, validator.getErrorMessage());
-            }
+        if (isNameValid == false || isAddressValid == false) {
+            return false;
         }
-
-        return  new ValidationResult(true, "Validate thành công trên mọi mặt trận");
-    }
-    public  static class  ValidationResult {
-        private boolean isValid;
-        private String message;
-
-        public ValidationResult(boolean isValid, String message ) {
-            this.isValid = isValid;
-            this.message = message;
-        }
-
-        public boolean isValid() {
-            return isValid;
-        }
-
-        public void setValid(boolean valid) {
-            isValid = valid;
-        }
+        return true;
     }
 }
