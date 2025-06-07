@@ -1,9 +1,6 @@
 package fileio;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 //import java.nio.File;
@@ -24,11 +21,14 @@ public class FileDemo {
 
         FileOutputStream fileOutputStream = new FileOutputStream(fileTxtPath, true);
         PrintWriter out = new PrintWriter(fileOutputStream);
-        out.println("Ca si my tam");
+//        out.println("Ca si my tam");
         out.close();
 
 
-
+        BufferedReader bufferedReader = new BufferedReader(
+                new FileReader(fileTxtPath)
+        );
+        bufferedReader.lines().forEach(line -> System.out.println(line));
 
     }
 }
