@@ -17,7 +17,9 @@ public class Main {
         System.out.println("Finished");
     }
 
-    private static int div (int a, int b) throws DivZeroException {
+    private static int div (int a, int b) throws
+            DivZeroException,
+            NullPointerException {
         if (b == 0) {
             throw new DivZeroException("Loi chia cho 0");
         }
