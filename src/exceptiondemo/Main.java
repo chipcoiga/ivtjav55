@@ -1,8 +1,5 @@
 package exceptiondemo;
 
-import java.io.IOException;
-import java.util.EmptyStackException;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -10,8 +7,9 @@ public class Main {
             int b = 5;
             int c = 0;
             int a = div(b, c);
-        } catch (QuocThongException e) {
+        } catch (DivZeroException e) {
             System.out.println(e.getMessage());
+            e.printStackTrace();
         } finally {
             System.out.println("Luôn được chạy");
         }
@@ -19,9 +17,9 @@ public class Main {
         System.out.println("Finished");
     }
 
-    private static int div (int a, int b) throws QuocThongException {
+    private static int div (int a, int b) throws DivZeroException {
         if (b == 0) {
-            throw new QuocThongException("Loi chia cho 0");
+            throw new DivZeroException("Loi chia cho 0");
         }
         return a/b;
     }
