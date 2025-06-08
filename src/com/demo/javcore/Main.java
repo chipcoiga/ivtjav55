@@ -3,47 +3,44 @@ package com.demo.javcore;
 
 import com.demo.javcore.domain.HocSinhDto;
 import com.demo.javcore.service.HocSinhService;
-import com.demo.javcore.validator.HocSinhValidator;
-import staticmethod.HocSinh;
+import java.util.Scanner;
 
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         //Gia dinh da co hoc sinh
-        HocSinhDto[] dtos = new HocSinhDto[1];
+        Scanner sc = new Scanner(System.in);
 
         HocSinhDto hocSinhDto = new HocSinhDto();
-        hocSinhDto.setName("Nguyen Van A");
-        hocSinhDto.setAddress("102 Quang Trung");
-        hocSinhDto.setMath(11);
-        hocSinhDto.setPhysical(6);
-        hocSinhDto.setChemistry(7);
-        hocSinhDto.setAge(16);
 
-        dtos[0] = hocSinhDto;
+        System.out.print("Nhập tên học sinh: ");
+        hocSinhDto.setName(sc.nextLine());
+
+        System.out.print("Nhập địa chỉ: ");
+        hocSinhDto.setAddress(sc.nextLine());
+
+        System.out.print("Nhập tuổi: ");
+        hocSinhDto.setAge(sc.nextInt());
+
+        System.out.print("Nhập điểm Toán: ");
+        hocSinhDto.setMath(sc.nextFloat());
+
+        System.out.print("Nhập điểm Lý: ");
+        hocSinhDto.setPhysical(sc.nextFloat());
+
+        System.out.print("Nhập điểm Hóa: ");
+        hocSinhDto.setChemistry(sc.nextFloat());
 
         HocSinhService service = new HocSinhService();
 
-        for (HocSinhDto dto : dtos) {
-            service.validateHocSinh(dto);
+        boolean isHocSinhValid = service.validateHocSinh(hocSinhDto);
+        if (!isHocSinhValid) {
+            System.out.println("Thông tin học sinh không hợp lệ");
+            return;
         }
-
-        HocSinhValidator hocSinhValidator = new HocSinhValidator() {
-            @Override
-            public void validate() {
-                System.out.println("sfsd");
-            }
-        };
-
-        HocSinh hocSinh = new HocSinh();
-
-        switch (hocSinh.getGender()) {
-            case BD -> System.out.println("BD");
-            case LESS -> System.out.println("LESS");
-            case MALE -> System.out.println("MALE");
-            case FEMALE -> System.out.println("FEMALE");
-            default -> System.out.println("Khong tiet lo");
-        }
+        String hocLuc = service.phanLoaiHocLuc(hocSinhDto);
+        System.out.println("Học lực của học sinh tên "
+                + hocSinhDto.getName() + " là: " + hocLuc);
     }
 }
