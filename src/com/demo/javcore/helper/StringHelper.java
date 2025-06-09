@@ -3,21 +3,14 @@ package com.demo.javcore.helper;
 public class StringHelper {
     public static boolean isBlank(String input) {
         if (input == null) {
-            System.out.println("Input bi null");
+            System.out.println("Input bị null");
             return true;
         }
 
         if (input.equals("")) {
-            System.out.println("Input bi empty");
+            System.out.println("Input bi empty hoac chi chua khoang trang ");
             return true;
         }
-
-        String addressStrim = input.replaceAll(" ", "");
-        if (addressStrim.equals("")) {
-            System.out.println("Input bi empty");
-            return true;
-        }
-
-        return false;
+            return false;
     }
 }
