@@ -72,4 +72,18 @@ public class StudentService {
             System.out.println("================");
         }
     }
+
+    public void searchStudentByName(String name) {
+        List<Student> students = repository.searchStudent(name);
+
+        System.out.println("tim thay " + students.size() + " students");
+        for(Student student : students) {
+            System.out.println("ID: " + student.getStudentId());
+            System.out.println("Name: " + student.getStudentName());
+            System.out.println("Batch: " + student.getBatch());
+            System.out.println("Mark1: " + student.getMark1());
+            System.out.println("Mark2: " + student.getMark2());
+            System.out.println("================");
+        }
+    }
 }

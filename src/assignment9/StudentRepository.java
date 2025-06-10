@@ -14,4 +14,11 @@ public class StudentRepository {
     public List<Student> getStudents() {
         return this.students;
     }
+
+    public List<Student> searchStudent(String name) {
+        List<Student> result = this.students.stream()
+                .filter(student -> student.getStudentName().contains(name))
+                .toList();
+        return result;
+    }
 }

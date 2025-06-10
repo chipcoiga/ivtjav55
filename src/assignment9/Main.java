@@ -16,6 +16,12 @@ public class Main {
                 case 2 -> service.printAllStudents();
                 case 3 -> service.printAllStudentAverageMark();
                 case 4 -> service.printSortedStudents();
+                case 5 -> {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("Nhap text can search");
+                    String searchText = scanner.nextLine();
+                    service.searchStudentByName(searchText);
+                }
             }
         } while (selectedOption != 0);
     }
@@ -27,6 +33,7 @@ public class Main {
         System.out.println("2. In toan bo student");
         System.out.println("3. Tinh va in diem trung binh");
         System.out.println("4. Sap xep theo diem trung binh");
+        System.out.println("5. Search");
         System.out.println("0. Ket thuc chuong trinh");
 
         int selectedOption = scanner.nextInt();
