@@ -19,6 +19,8 @@ public class FileDemo {
             Files.createFile(filePath);
         }
 
+        //Khoan, đợi 10s
+
         FileOutputStream fileOutputStream = new FileOutputStream(fileTxtPath, true);
         PrintWriter out = new PrintWriter(fileOutputStream);
 //        out.println("Ca si my tam");
