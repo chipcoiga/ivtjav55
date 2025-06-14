@@ -1,4 +1,4 @@
-package assignment9;
+package assignment9.bai1;
 
 public class Student {
     private int studentId;

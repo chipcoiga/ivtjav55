@@ -1,4 +1,4 @@
-package assignment9;
+package assignment9.bai1;
 
 import java.util.Scanner;
 
