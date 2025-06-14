@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeRepository {
-    private List<Employee> employees = new ArrayList<>();
+    private List<Person> people = new ArrayList<>();
 
-    public void add(Employee employee) {
-        employees.add(employee);
+    public void add(Person person) {
+        people.add(person);
     }
 
-    public List<Employee> getEmployees() {
-        return employees;
+    public List<Person> getPeople() {
+        return people;
     }
 }

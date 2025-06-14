@@ -14,6 +14,7 @@ public class Main {
                 case 1 -> service.createEmployee();
                 case 2 -> service.printEmployees();
                 case 3 -> service.calculateTotalSalaryOfMonth();
+                case 4 -> service.createPartner();
             }
         } while (menuOptionSelected != 0);
     }
@@ -21,14 +22,17 @@ public class Main {
     private static int inputOptionSelected() {
         try {
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Nhap lua cho chuc nang:");
-            System.out.println("1: Nhap thong tin nhan vien");
-            System.out.println("2: In toan bo thong tin nhan vien");
-            System.out.println("3: Tinh tong luong nhan vien");
+            System.out.println("========== MENU ==========");
+            System.out.println("1: Nhập thông tin nhân viên");
+            System.out.println("2: In toàn bộ thông tin nhân viên và partner");
+            System.out.println("3: Tính tổng lương nhân viên và partner");
+            System.out.println("4: Nhập thông tin partner");
+            System.out.println("0: Thoát");
+            System.out.print("Chọn chức năng: ");
             int selectedNumber = scanner.nextInt();
             return selectedNumber;
         } catch (Exception e) {
-            System.out.println("Vui long nhap so");
+            System.out.println("Vui lòng nhập số.");
             return inputOptionSelected();
         }
     }

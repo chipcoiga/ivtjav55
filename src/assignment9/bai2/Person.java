@@ -28,4 +28,11 @@ public class Person {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @Override
+    public String toString() {
+        return "No: " + personNo + "\n" +
+                "Name: " + name + "\n" +
+                "Email: " + email;
+    }
 }
