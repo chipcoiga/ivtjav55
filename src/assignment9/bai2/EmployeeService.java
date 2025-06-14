@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeService {
-    private EmployeeRepository repository;
+    private PersonRepository repository;
 
-    public EmployeeService(EmployeeRepository repository) {
+    public EmployeeService(PersonRepository repository) {
         this.repository = repository;
     }
 
@@ -35,23 +35,28 @@ public class EmployeeService {
     }
 
     public void printEmployees() {
-        List<Employee> employees = repository.getEmployees();
-        for (Employee employee : employees) {
+        List<Person> employees = repository.getEmployees();
+        for (Person employee : employees) {
             System.out.println("No: " + employee.getPersonNo());
             System.out.println("Name: " + employee.getName());
-            System.out.println("Role: " + employee.getRole());
-            System.out.println("Salary: " + String.format("%.1f", employee.getSalary()));
             System.out.println("==============");
 
         }
     }
 
     public void calculateTotalSalaryOfMonth() {
-        List<Employee> employees = repository.getEmployees();
+        List<Person> personList = repository.getEmployees();
 
         double totalSalary = 0;
-        for (Employee employee : employees) {
-            totalSalary = totalSalary + employee.getSalary();
+        for (Person person : personList) {
+            if (person instanceof Employee employee) {
+                totalSalary = totalSalary + employee.getSalary();
+                continue;
+            }
+
+            if (person instanceof Partner partner) {
+                totalSalary = totalSalary + partner.getActualSalary();
+            }
         }
 
         System.out.println("Total salary: " + String.format("%.1f", totalSalary));
